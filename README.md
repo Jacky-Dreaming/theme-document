@@ -14,28 +14,6 @@ Gitee：[https://gitee.com/friend-nicen/theme-document](https://gitee.com/friend
 
 使用帮助看这里：[https://nicen.cn/1552.html](https://nicen.cn/1552.html)
 
-> 😁，加我微信【good7341】或机器人微信【nicen_friend】拉你进交流群！
-
-# 打赏记录
-
-不定时更新..........，感谢：
-
-| 时间         | 昵称          | 金额    |
-|------------|-------------|-------|
-| 2024-04-08 | 黯星丶         | 36.6  |
-| 2024-04-18 | 桩白墨 plough  | 25    |
-| 2024-11-13 | Laumy       | 66.0  |
-| 2025-01-13 | Jason zhang | 100.0 |
-| 2025-02-13 | 法律人@海       | 66.0  |
-| 2025-04-25 | Laumy       | 60.0  |
-
-
-# 打赏
-
-乐意的话，打赏一下也行，不打赏也没关系，如果打赏记得备注一下大名哦，~.~
-
-![img.png](https://weixin.nicen.cn/images/weixin.jpg)
-
 # 插件推荐
 
 ## Wordpress免费远程图片本地化插件
