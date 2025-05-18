@@ -10,16 +10,43 @@ function nicen_theme_load_source() {
 	$root = get_template_directory(); //主题路径
 	$url  = get_template_directory_uri();//主题url
 
+
 	/* 底部推荐区域 */
 	if ( is_active_sidebar( 'content_down' ) ) {
-		wp_enqueue_script( 'swiper', 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.js', false );
-		wp_enqueue_style( 'swiper-styles', 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.css' );
+		// Swiper JS 和 CSS from Cloudflare CDN
+		wp_enqueue_script(
+			'swiper',
+			'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.js',
+			array(), // 如果依赖 jQuery 可填 ['jquery']
+			'8.0.6',
+			true // 建议将 JS 放到底部
+		);
+		wp_enqueue_style(
+			'swiper-styles',
+			'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.css',
+			array(),
+			'8.0.6'
+		);
 	}
 
-
 	/*主题的JS*/
-	wp_enqueue_script( 'jquerys', 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js', false );
-	wp_enqueue_script( 'enquire', 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/enquire.js/2.1.6/enquire.js', false );
+	// jQuery from Cloudflare CDN
+	wp_enqueue_script(
+		'jquerys',
+		'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js',
+		array(),
+		'3.6.0',
+		true
+	);
+
+	// enquire.js from Cloudflare CDN
+	wp_enqueue_script(
+		'enquire',
+		'https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.6/enquire.min.js',
+		array(),
+		'2.1.6',
+		true
+	);
 
 
 	wp_enqueue_script( 'main-sub', $url . '/common/inline/main.js', array(), filemtime( $root . '/common/inline/main.js' ), false );
@@ -29,6 +56,14 @@ function nicen_theme_load_source() {
 
 	/*主题的style.css*/
 	wp_enqueue_style( 'main-styles', get_stylesheet_uri(), array(), filemtime( $root . '/style.css' ) );
+
+	// wp_enqueue_style( 'font-awesome', get_stylesheet_uri(), array(), filemtime( $root . '/assets/vendor/font-awesome/css/font-awesome.min.css' ) );
+	wp_enqueue_style(
+		'font-awesome',
+		'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
+		array(),
+		'6.5.0' // 可选：指定 Font Awesome 版本号
+	);
 
 	/*
 	 * 去除无用的css
@@ -78,8 +113,19 @@ function nicen_theme_load_source() {
 	if ( is_home() ) {
 		wp_enqueue_style( 'swiper_self', $url . '/common/swiper/swiper.css', array(), filemtime( $root . '/common/swiper/swiper.css' ) );
 		wp_enqueue_script( 'swiper_self', $url . '/common/swiper/swiper.js', array(), filemtime( $root . '/common/swiper/swiper.js' ), true );
-		wp_enqueue_script( 'swiper', 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.3/swiper-bundle.min.js', false );
-		wp_enqueue_style( 'swiper', 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.3/swiper-bundle.css', array() );
+		wp_enqueue_script(
+			'swiper',
+			'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.min.js',
+			array(),
+			'8.0.3',
+			true // 推荐放在页面底部
+		);
+		wp_enqueue_style(
+			'swiper',
+			'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.min.css',
+			array(),
+			'8.0.3'
+		);
 		/*
 		 * 内联的js代码
 		 * */
