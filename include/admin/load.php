@@ -12,40 +12,44 @@ function nicen_theme_admin_load_source() {
 
 
     // Vue.js v2.6.14
-    wp_enqueue_script(
-        'vuejs',
-        'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js',
-        array(),
-        '2.6.14',
-        true
-    );
+    wp_enqueue_script( 'vuejs', 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js', false );
+    // wp_enqueue_script(
+    //     'vuejs',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js',
+    //     array(),
+    //     '2.6.14',
+    //     true
+    // );
 
     // Moment.js v2.29.1
-    wp_enqueue_script(
-        'moments',
-        'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js',
-        array(),
-        '2.29.1',
-        true
-    );
+    wp_enqueue_script( 'moments', 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js' );
+    // wp_enqueue_script(
+    //     'moments',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js',
+    //     array(),
+    //     '2.29.1',
+    //     true
+    // );
 
     // Ant Design Vue v1.7.8
-    wp_enqueue_script(
-        'antd',
-        'https://cdnjs.cloudflare.com/ajax/libs/ant-design-vue/1.7.8/antd.min.js',
-        array( 'jquery' ),
-        '1.7.8',
-        true
-    );
+    wp_enqueue_script( 'antd', 'https://cdnjs.cloudflare.com/ajax/libs/ant-design-vue/1.7.8/antd.min.js', [ 'jquery' ] );
+    // wp_enqueue_script(
+    //     'antd',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/ant-design-vue/1.7.8/antd.min.js',
+    //     array( 'jquery' ),
+    //     '1.7.8',
+    //     true
+    // );
 
     wp_enqueue_script( 'Vcolorpicker', $url . '/common/admin/colorpicker.js', [ 'vuejs' ], filemtime( $root . '/common/admin/colorpicker.js' ), true );
 
-    wp_enqueue_style(
-        'antdcss',
-        'https://cdnjs.cloudflare.com/ajax/libs/ant-design-vue/1.7.8/antd.min.css',
-        array(),
-        '1.7.8'
-    );
+    wp_enqueue_style( 'antdcss', 'https://cdnjs.cloudflare.com/ajax/libs/ant-design-vue/1.7.8/antd.min.css' );
+    // wp_enqueue_style(
+    //     'antdcss',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/ant-design-vue/1.7.8/antd.min.css',
+    //     array(),
+    //     '1.7.8'
+    // );
 
     wp_enqueue_style( 'admincss', $url . '/common/admin/admin.css', array(), filemtime( $root . '/common/admin/admin.css' ) );
     wp_enqueue_script( 'adminjs', $url . '/common/admin/admin.js', [
@@ -64,13 +68,14 @@ function nicen_theme_admin_load_source() {
     ], filemtime( $root . '/common/admin/load.js' ) );
 
     // Axios v0.26.0
-    wp_enqueue_script(
-        'axios',
-        'https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js',
-        array(),
-        '0.26.0',
-        true
-    );
+    wp_enqueue_script( 'axios', 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js' );
+    // wp_enqueue_script(
+    //     'axios',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js',
+    //     array(),
+    //     '0.26.0',
+    //     true
+    // );
 
     wp_enqueue_media(); //加载媒体选择器
 
@@ -100,12 +105,13 @@ function nicen_theme_widget_admin_load() {
     $url  = get_template_directory_uri();//主题url
     wp_enqueue_style( 'widgetcss', $url . '/common/widget/widget.css', array(), filemtime( $root . '/common/widget/widget.css' ) );
     // jQuery UI CSS v1.12.1
-    wp_enqueue_style(
-        'jqueryuicss',
-        'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css',
-        array(),
-        '1.12.1'
-    );
+    wp_enqueue_style( 'jqueryuicss', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css', array() );
+    // wp_enqueue_style(
+    //     'jqueryuicss',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css',
+    //     array(),
+    //     '1.12.1'
+    // );
     wp_enqueue_script( 'widgetjs', $url . '/common/widget/widget.js', array(
         'jquery-ui-tabs',
         'jquery-ui-datepicker'
