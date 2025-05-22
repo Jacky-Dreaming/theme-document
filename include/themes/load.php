@@ -22,7 +22,7 @@ function nicen_theme_load_source() {
 		// 	'8.0.6',
 		// 	true // 建议将 JS 放到底部
 		// );
-		wp_enqueue_script( 'swiper-styles', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.css' );
+		wp_enqueue_style( 'swiper-styles', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.css' );
 		// wp_enqueue_style(
 		// 	'swiper-styles',
 		// 	'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.css',
